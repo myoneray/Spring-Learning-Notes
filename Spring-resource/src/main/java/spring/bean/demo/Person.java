@@ -58,8 +58,15 @@ public class Person implements InitializingBean, DisposableBean, BeanNameAware, 
     }
 
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+
         System.out.println("08>我的applicationContext:" + applicationContext);
+        /**
+         * @see ServletContextAware
+         */
         System.out.println("09>实现ServletContextAware可以获取ServletContext");
+        /**
+         * @see BeanPostProcessor#postProcessBeforeInitialization
+         */
         System.out.println("10>实现BeanPostProcessor#postProcessBeforeInitialization()可扩展容器!");
     }
 
